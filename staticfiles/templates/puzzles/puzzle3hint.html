@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://www.youtube.com/watch?v=VdfeaVIOpUs">Watch me carefully!!</a>
+    <br>
+    <br>
+    <button id="myButton" onclick="changeText()">Click For more hint</button>
+    <br>
+    <br>
+    <button id="myButton1" onclick="changeText1()">Click For more hint</button>
+    <br>
+    <br>
+    <button id="myButton2" onclick="changeText2()">Click For more hint</button>
+
+    <script>
+      function changeText() {
+        document.getElementById("myButton").innerHTML =
+          "Find the code in the videos!!";
+      }
+
+
+      function changeText1() {
+        document.getElementById("myButton1").innerHTML =
+          "https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html";
+      }
+
+      function changeText2() {
+        document.getElementById("myButton2").innerHTML =
+          "Find the dollar currency in the video and decrypt that code";
+      }
+    </script>
+
+   
+</body>
+</html>

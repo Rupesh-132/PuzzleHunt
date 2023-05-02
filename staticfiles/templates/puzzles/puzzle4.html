@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/static/css/puzzle1.css" rel="stylesheet" />
+    <style>
+
+      body
+      {
+        background: url("/static/img/yellow.jpg");
+      }
+      .clue {
+        margin-top: 250px;
+        background-color: rgb(33, 99, 204);
+        border-radius: 25px;
+        font-size: medium;
+        padding: 10px 30px;
+        margin-left: 50px;
+        border: none;
+        margin-right: 150px;
+        color: aliceblue;
+      }
+
+      .buttons-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .submit {
+        background-color: rgb(33, 99, 204);
+
+        font-size: medium;
+
+        border: none;
+
+        color: aliceblue;
+        cursor: pointer;
+        height: 51px;
+        border-radius: 0 25px 25px 0;
+        width: 70px;
+      }
+
+      button[type="submit"]:hover {
+        background: #ff5722;
+        cursor: hand;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1">
+        <div class="heading-secondary">
+          <h1>{{data.3.question}}</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <form method="post" action="{% url 'checkanspuzz4' %}">
+        {% csrf_token %}
+        <input
+          type="text"
+          id="answer"
+          name="ans"
+          placeholder="Write your answer here"
+          required
+        />
+        <button type="submit" id="btn" class="submit" onclick="audio.play();">
+          Submit
+        </button>
+        <script type="text/javascript">
+          const audio = new Audio();
+          audio.src = "/static/music/wrong.mp3";
+        </script>
+      </form>
+    </div>
+
+    <div class="buttons-container">
+      <button onclick="location.href='/puzzle4hint'" class="clue">Clue</button>
+      <button onclick="location.href='/signin'" class="clue">Restart</button>
+      <button onclick="location.href='/signout'" class="clue">Logout</button>
+    </div>
+  </body>
+</html>

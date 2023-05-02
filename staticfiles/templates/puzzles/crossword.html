@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box {
+       justify-content: center;
+       display: block;
+       background-color: #f2f2f2;
+       width: 300px;
+       height: 200px;
+       margin-left: 480px;
+       
+     }
+     
+   </style>
+  </head>
+  <body>
+
+    <div class="box">
+      <button id="myButton" onclick="changeText()">clue1</button>
+      <img src="/static/img/crossWord.png" width="400" height="400" alt="" />
+      <img src="/static/img/tomato.png" width="400" height="400" alt="" />
+      <br />
+
+      <h1>
+        <button id="myButton1" onclick="changeText1()">Click For more hint</button>
+  
+      </h1>
+      <br>
+      <br>
+    </div>
+    
+
+    
+    <script>
+      function changeText() {
+        document.getElementById("myButton").innerHTML =
+          "Solve this crossword to find that particular word!!";
+      }
+
+      function changeText1() {
+        document.getElementById("myButton1").innerHTML =
+          "You can take the help of previous question image it is red in color";
+      }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+    body {
+      margin: 0;
+      box-sizing: border-box;
+      background-color: #f6f6f7;
+    
+      }
+
+      .background {
+        background-image: url("/static/img/indback.jpg"); /* replace with the URL of your image */
+        background-repeat: no-repeat; 
+        background-size: cover; 
+        filter: blur(10px); 
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1; 
+      }
+    
+     
+
+    
+    h1{
+      
+      position: fixed;
+      display: block;
+      justify-content: center;
+      margin-top: 50px;
+      margin-left: 320px;
+      font-size: 60px;
+      font-weight: bold;
+      text-transform: uppercase;
+      -webkit-text-stroke:0.15vw #121210;
+      size: 25px;
+     
+    }
+    h1::before{
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      color: #c8e10b;
+      -webkit-text-stroke:0.15vw #121210;
+      border-right: 2px solid  #c8e10b;
+      overflow: hidden;
+      animation: animate 6s linear infinite;
+    }
+    @keyframes animate
+    { 
+      0%,10%,100%
+      {
+       width: 0;
+      }
+      70%,90%
+      {
+       width: 100%;
+      }
+    }
+  
+
+    /* CSS for main element */
+    .intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 720px;
+      background: url("/static/img/indback.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    
+  
+
+    .container1 button {
+      background-color: #a6e719;
+      margin-top: 10px;
+     
+      color: #ebede9;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      display: block;
+      position: cent;
+      font-weight: bold;
+      cursor: pointer;
+      
+     
+    }
+    .container2 button {
+      background-color: #2ebce3;
+      margin-top: 10px;
+      
+      color: #f1f9fb;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 20px;
+      display: block;
+      position: cent;
+      font-weight: bold;
+      cursor: pointer;
+      
+      
+    }
+
+    
+
+  
+  </style>
+
+    
+</head>
+<body>
+      
+  <div class="background"></div>
+  <div class="head">
+
+    <h1 data-text="WELCOME TO PUZZLE HUNT!!">WELCOME TO PUZZLE HUNT!!</h1>
+
+  </div>
+  
+      <main>
+        <div class="intro">
+         
+          {% for message in messages %}
+          <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+              <strong>Message:</strong> {{ message }}
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+           </button>
+          </div>
+          {% endfor %}
+      
+          
+      
+          {% if user.is_authenticated %}
+          
+      
+          <div class="container">
+             
+            <div class="button-container">
+         
+          <div class="container2">
+
+            <button type="submit" onclick="goToPage2()">Let's0Go </a></button>
+            <script>
+              function goToPage2() {
+                window.location.href = "/play"; // replace with the URL of the other page
+              }
+            </script>
+            <button type="submit" onclick="goToPage3()">Logout</a></button>
+            <script>
+              function goToPage3() {
+                window.location.href = "/signout"; // replace with the URL of the other page
+              }
+            </script>
+          </div>
+          
+      
+          {% else %}
+          <div class="container2">
+            <button type="submit" onclick="goToPage1()">SignUp</a></button>
+            <script>
+              function goToPage1() {
+                window.location.href = "/signup"; // replace with the URL of the other page
+              }
+            </script>
+            
+          </div>
+         
+          
+
+          <div class="container2">
+            
+            <button type="submit" onclick="goToPage()">SignIn</></button>
+            <script>
+              function goToPage() {
+                window.location.href = "/signin"; // replace with the URL of the other page
+              }
+            </script>
+
+          </div>
+          
+          {% endif %}
+         
+              </div>
+          </div>
+
+
+        
+        
+        
+      </main>
+    
+
+
+    
+</body>
+</html>
