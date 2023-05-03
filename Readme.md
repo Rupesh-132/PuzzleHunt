@@ -75,3 +75,21 @@ https://web-production-ccad.up.railway.app/
 - User will not be able to move to next question unless he solves current
 - authentication of he user is done from the backend using django modules.
 - Finally working project is deployed on railway.app(cloud hosting platform)
+
+## Feature checklist
+- Login using email and password: Yes
+- User data(can be seen from admin dashboard): Yes
+- Questions can be added from admin dashboard(customized) backened support
+- Database support: Yes
+- Login session retention : Yes
+- Minimum 5 clues: Yes
+- Minimum 2 Deadend: yes
+- Restart feature on every page: Yes
+- Logout feature at every page: Yes
+- Music(if user try to submit empty ans: Yes
+- ![image](https://user-images.githubusercontent.com/79595858/235852083-040c9e9e-e378-412d-99e9-e6234d725719.png)
+- User can be added by the admin if he wants to
+## Scope of improvement:
+- Working on Ui to make it look classic;
+- Working on leaderboard of each user
+- Working on displaying graphs for all the actions of user(time sessions,correct ans, accuracy level)
