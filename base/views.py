@@ -193,7 +193,7 @@ def checkanspuzz2(request):
         
 
 def playcrossword(request):
-     return render(request,'puzzles/crossWord.html')
+     return render(request,'puzzles/crossword.html')
 
    
 def checkanspuzz3(request):
