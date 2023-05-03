@@ -64,3 +64,14 @@ https://web-production-ccad.up.railway.app/
    - The ans is : Attire
   
  
+## Steps to set up the project
+- Made using Django framework.
+- First model was build for the admin dashboard
+- Admin portal to maanage login and signup sessions of the user
+- Database set up using sqllit3
+- Frontend design is done using Html, css, Javascript
+- Questions can be posted from the admin portal.
+- Login sessions is retained for a particular user who has logged in
+- User will not be able to move to next question unless he solves current
+- authentication of he user is done from the backend using django modules.
+- Finally working project is deployed on railway.app(cloud hosting platform)
