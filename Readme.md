@@ -9,7 +9,7 @@ This is the puzzlehunt app where you can play tricky puzzle:
 - Each page has the option to logout
 
 
-![home](https://user-images.githubusercontent.com/79595858/235846475-e51af224-158e-4e30-930a-5636475b6df6.png)
+![image](https://user-images.githubusercontent.com/79595858/236599975-25f8b91c-53d3-4389-8dea-1051187d192e.png)
 
 ## App link
 https://web-production-ccad.up.railway.app/
